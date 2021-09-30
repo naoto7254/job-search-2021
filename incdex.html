@@ -1,0 +1,76 @@
+スレッドを開きました。既読メッセージは 1 件です。
+
+コンテンツへ
+Gmail でのスクリーン リーダーの使用
+in:sent
+Meet
+会議を新規作成
+会議に参加
+ハングアウト
+
+スレッド
+8.51 GB/15 GB を使用中
+利用規約 · プライバシー · プログラム ポリシー
+前回のアカウント アクティビティ: 3 時間前
+詳細
+<?php $title = 'job_search'; ?>
+
+<h1 class="h2 mt-4 mb-4">職場検索フォーム</h1>
+
+<form name="form" action="research_add.php" method="post" autocomplete="off">
+
+  <div class="form-group mt-3 mb-3">
+    <label for="name">オーナー名</label>
+    <input name="name" class="form-control" type="text" id="name" placeholder="オーナー名">
+  </div>
+
+  <div class="form-group  mt-3 mb-3">
+    <label for="address">住所</label>
+    <input name="address" class="form-control" type="text" id="address" placeholder="住所 例)東京都">
+  </div>
+
+  <h1 class="h4 mt-4 mb-2">カスタマイズして検索する</h1>
+  <details>
+    <p>下記リスト内から含めないもののチェックを外してください</p>
+
+    <script type="text/javascript">
+      // 全選択、全解除の処理
+      function chkAll_form(bool) {
+        let frm = document.form;
+        for (let i = 0; i < frm.length; i++) {
+          if (frm.elements[i].type == "checkbox") {
+            frm.elements[i].checked = bool;
+          }
+        }
+      }
+    </script>
+    <input type="button" onclick="chkAll_form(true)" value="全選択" class="mb-3 btn btn-primary">
+    <input type="button" onclick="chkAll_form(false)" value="全解除" class="mb-3 btn btn-primary">
+    <div class="form-check form-switch">
+      <input type="checkbox" name="j-global_site" value="j-global_site" class="form-check-input" checked>J-Globalサイト<br>
+      <input type="checkbox" name="astamuse_site" value="astamuse_site" class="form-check-input" checked>astamuseサイト<br>
+      <input type="checkbox" name="jsdf_site" value="jsdf_site" class="form-check-input" checked>自衛隊、防衛省サイト<br>
+      <input type="checkbox" name="nikkei_site" value="nikkei_site" class="form-check-input" checked>日経人事ウォッチサイト<br>
+      <input type="checkbox" name="teacher_site" value="teacher_site" class="form-check-input" checked>教職員人事異動サイト<br>
+      <input type="checkbox" name="kazen_site" value="kazen_site" class="form-check-input"
+        checked>KAZENサイト（大学教員、研究者）<br>
+      <input type="checkbox" name="eight" value="eigaht" class="form-check-input" checked>EIGHTサイト<br>
+      <input type="checkbox" name="public_officer" value="public_officer" class="form-check-input" checked>公務員<br>
+      <input type="checkbox" name="pdf" value="pdf" class="form-check-input" checked>PDF<br>
+      <input type="checkbox" name="move" value="move" class="form-check-input" checked>異動<br>
+      <input type="checkbox" name="teacher" value="teacher" class="form-check-input" checked>教員<br>
+      <input type="checkbox" name="jsdf" value="jsdf" class="form-check-input" checked>自衛隊<br>
+      <input type="checkbox" name="medicine" value="medicine" class="form-check-input" checked>薬<br>
+      <input type="checkbox" name="insurance" value="insurance" class="form-check-input" checked>保険<br>
+      <input type="checkbox" name="stock" value="stock" class="form-check-input" checked>証券<br>
+    </div>
+  </details>
+
+  <input type="submit" name="button" value="送信" class="btn btn-primary mt-3">
+</form>
+
+<?php
+include('layout.php');
+?>
+index.php
+index.php を表示しています。
